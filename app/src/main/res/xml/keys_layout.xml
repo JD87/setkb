@@ -8,7 +8,8 @@
     android:keyBackground="@color/colorPrimaryDark">
 
     <Row>
-        <Key android:codes="49" android:keyLabel="1" android:keyEdgeFlags="left"/>
+        <Key android:codes="177" android:keyLabel="ESC" android:keyWidth="20%p" android:keyEdgeFlags="left"/>
+        <Key android:codes="49" android:keyLabel="1"/>
         <Key android:codes="50" android:keyLabel="2"/>
         <Key android:codes="51" android:keyLabel="3"/>
         <Key android:codes="52" android:keyLabel="4"/>
@@ -57,9 +58,10 @@
         <Key android:codes="63,33,58" android:keyLabel="\? ! :" android:keyEdgeFlags="right"/>
     </Row>
     <Row android:rowEdgeFlags="bottom">
-        <Key android:codes="44" android:keyLabel="," android:keyWidth="10%p" android:keyEdgeFlags="left"/>
-        <Key android:codes="47" android:keyLabel="/" android:keyWidth="10%p"/>
-        <Key android:codes="32" android:keyLabel="GROUND CONTROL TO MAYOR TOM" android:keyWidth="60%p" android:isRepeatable="true"/>
+        <Key android:codes="132" android:keyLabel="CTRL" android:keyWidth="10%p" android:keyEdgeFlags="left"/>
+        <Key android:codes="44" android:keyLabel=","/>
+        <Key android:codes="47" android:keyLabel="/"/>
+        <Key android:codes="32" android:keyLabel="SPACE" android:keyWidth="60%p" android:isRepeatable="true"/>
         <Key android:codes="-4" android:keyBackground="@color/colorPrimary" android:keyLabel="DONE" android:keyWidth="20%p" android:keyEdgeFlags="right"/>
     </Row>
 </Keyboard>
