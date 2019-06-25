@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onKey(int primaryCode, int[] keyCodes) {
 
-                if(primaryCode == Keyboard.KEYCODE_SHIFT){
+                if(primaryCode == Keyboard.KEYCODE_SHIFT || primaryCode == 133){
                     caps = !caps;
                     keys.setShifted(caps);
                     kv.invalidateAllKeys();
