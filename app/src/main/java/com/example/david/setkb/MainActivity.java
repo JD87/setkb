@@ -51,12 +51,14 @@ public class MainActivity extends AppCompatActivity  {
         kv.setEnabled(true);
         kv.setClickable(true);
 
+        kv.setPreviewEnabled(true);
+
         KeyboardView.OnKeyboardActionListener listener = new KeyboardView.OnKeyboardActionListener() {
 
             @Override
             public void onKey(int primaryCode, int[] keyCodes) {
 
-                if(primaryCode == Keyboard.KEYCODE_SHIFT || primaryCode == 133){
+                if(primaryCode == Keyboard.KEYCODE_SHIFT || primaryCode == 193){
                     caps = !caps;
                     keys.setShifted(caps);
                     kv.invalidateAllKeys();
@@ -69,19 +71,20 @@ public class MainActivity extends AppCompatActivity  {
                 TextView tv = (TextView) findViewById(R.id.text_view);
                 tv.setText("" + primaryCode);
                 byt_primaryCode = (byte) primaryCode;
-                Toast.makeText(getBaseContext(),"hey ohh! " + primaryCode, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getBaseContext(),"hey ohh! " + primaryCode, Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onRelease(int primaryCode) {
 
                 try {
                     send_to_BT_device(byt_primaryCode);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
             }
 
-            @Override
-            public void onRelease(int primaryCode) {
-            }
 
             @Override
             public void onText(CharSequence text) {
@@ -115,6 +118,8 @@ public class MainActivity extends AppCompatActivity  {
 
         };
         kv.setOnKeyboardActionListener(listener);
+
+
     }
 
 
